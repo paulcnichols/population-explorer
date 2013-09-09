@@ -1,0 +1,28 @@
+<div ng-init="init()" class="sc-graph" >
+  <div class="sc-chart-type ">
+    <ul class="nav nav-pills pull-right">
+      <li class="disabled"><a>Select Chart Type</a></li>
+      <li ng-class="{'active' : type == 'line' }"><a ng-click="type = 'line'; update()">Line</a></li>
+      <li ng-class="{'active' : type == 'scatter' }"><a ng-click="type = 'scatter'; update()">Scatter</a></li>
+    </ul>
+  </div>
+  <div class="sc-chart" id="chart">
+    
+  </div>
+  <div class="sc-select form-group">
+    <input type="search" class="form-control" placeholder="Filter Countries" ng-model="filter" ng-change="updateAll()">
+    <div class="checkbox sc-select-all">
+      <label>
+        <input type="checkbox" ng-model="selectedAll" ng-checked="selectedAll" value="selectedAll" ng-change="toggle()"> <strong>All</strong>
+        <a class="pull-right" ng-click="selectedAll = false; toggle()"> Reset Selection</a>
+      </label>
+    </div>
+    <div class="sc-select-checkbox">
+      <div class="checkbox" ng-repeat="r in rows | countryFilter:filter" >
+        <label>
+          <input type="checkbox" ng-model="r.selected" ng-checked="r.selected" value="r.selected" ng-change="update()"> {{r.cName}}
+        </label>
+      </div>
+    </div>
+  </div>
+</div>

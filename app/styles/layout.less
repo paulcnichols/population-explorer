@@ -1,0 +1,46 @@
+
+@topHeight: 35px;
+@sidebarWidth : 160px;
+
+.sc-sidebar {
+  /* geometry style */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: @sidebarWidth;
+  background-color: lightgrey;
+  color: grey;
+  
+  /* element style */
+  text-align: center;
+  width: @sidebarWidth;
+  
+  .sc-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: @topHeight;
+    height: @topHeight;
+    border-bottom: 2px solid grey;
+  }
+  
+  .sc-icon-bar {
+    a {
+      border-radius: 0px;
+      padding-top: 20px;
+    }
+  }
+}
+.sc-main {
+  /* geometry style */
+  position: fixed;
+  top: 0;
+  left: @sidebarWidth;
+  right: 0;
+  bottom: 0;
+  
+  /* element style */
+  background: white;
+  padding: @topHeight 20px 20px 20px;
+  overflow: auto;
+}
