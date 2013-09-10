@@ -93,10 +93,10 @@ module.exports = function (grunt) {
           jQuery: false,
           $: false,
           _: false,
-          scApp: false,
+          scApp: true,
           angular: false,
           require: false
-        }
+        } 
       },
       all: [
         '<%= yeoman.app %>/scripts/{,*/}*.js'

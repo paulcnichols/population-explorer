@@ -1,0 +1,88 @@
+body {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  background: #fafafa;
+}
+
+.sc-sidebar {
+  position: fixed;
+  top: 0;
+  right: 160px;
+  bottom: 0;
+  left: 0;
+  width: 160px;
+  color: grey;
+  text-align: center;
+  background-color: lightgrey;
+}
+
+.sc-sidebar .sc-title {
+  height: 35px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 35px;
+  border-bottom: 2px solid grey;
+}
+
+.sc-sidebar .sc-icon-bar a {
+  padding-top: 20px;
+  border-radius: 0;
+}
+
+.sc-main {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 160px;
+  padding: 35px 20px 20px 20px;
+  overflow: auto;
+  background: white;
+}
+
+.sc-table {
+  color: grey;
+}
+
+.sc-table tr,
+.sc-table td {
+  height: 40px;
+  line-height: 40px;
+}
+
+.sc-table .sc-sortable {
+  color: grey;
+  text-decoration: none;
+}
+
+.sc-table .sc-sortable:hover {
+  color: lightgrey;
+}
+
+.sc-graph .sc-chart {
+  height: 360px;
+}
+
+.sc-graph .sc-chart-type {
+  height: 40px;
+}
+
+.sc-graph .sc-select {
+  padding: 10px;
+  margin-top: 10px;
+  border: solid 1px lightgrey;
+  border-radius: 5px;
+}
+
+.sc-graph .sc-select-all {
+  border-bottom: solid 1px lightgrey;
+}
+
+.sc-graph .sc-select-checkbox {
+  max-height: 180px;
+  overflow: auto;
+}
+
+.sc-graph .sc-select-checkbox .checkbox:hover {
+  background-color: #eee;
+}
