@@ -1,4 +1,4 @@
-This is a dummy project to learn try out yeomen/bower/grunt workflow instead of using a seed project.  It creates a simple two page explorer for population growth.
+This is a dummy project to try out yeomen/bower/grunt workflow instead of using a seed project.  It creates a simple two page explorer for population growth.
 
 This project was created from the following yeoman command:
 - `yo angular`
