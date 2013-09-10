@@ -1,0 +1,27 @@
+
+<table class="table table-hover sc-table">
+<thead>
+  <tr>
+    <th><a class="sc-sortable" ng-click="sortByName()">
+      Country <span ng-show="sortValName"><i ng-class="{'icon-caret-up' : sortAsc, 'icon-caret-down': !sortAsc}"></i></span>
+    </a></th>
+    <th><a class="sc-sortable" ng-click="sortByCurrent()">
+      Population (Millions) <span ng-show="sortValCurrent"><i ng-class="{'icon-caret-up' : sortAsc, 'icon-caret-down': !sortAsc}"></i></span>
+    </a></th>
+    <th><a class="sc-sortable" ng-click="sortByGrowth()">
+      Growth Rate <span ng-show="sortValGrowth"><i ng-class="{'icon-caret-up' : sortAsc, 'icon-caret-down': !sortAsc}"></i></span>
+    </a></th>
+    <th>
+      Trend (1960-2010) 
+    </th>
+  </tr>
+</thead>
+<tbody>
+  <tr ng-repeat="r in rows">
+    <td>{{ r.cName }}</td>
+    <td>{{ r.yearSeries | last | number:2 }}</td>
+    <td>{{r.growthRate | number:2}}%</td>
+    <td><span sc-sparkline data="r.yearSeriesLog"></span></td>
+  </tr>
+</tbody>
+</table>

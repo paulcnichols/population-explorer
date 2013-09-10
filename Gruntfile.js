@@ -134,6 +134,7 @@ module.exports = function (grunt) {
             '.htaccess',
             'index.html',
             'bower_components/**/*',
+            'views/**/*',
             'images/{,*/}*.{gif,webp}',
             'styles/fonts/*',
             'world-pop.csv'
